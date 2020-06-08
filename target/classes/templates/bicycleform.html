@@ -14,25 +14,29 @@
     <div>
         <form class="form-horizontal" th:object="${bicycle}" th:action="@{/bicycle}" method="post">
             <input type="hidden" th:field="*{id}"/>
-            <div class="form-group">
-                <label class=" col-sm-2 control-label">Brand:</label>
-                <div class="col-sm-11">
+            <div class="form-group" style="display: flex;">
+                <label class=" col-label control-label">Brand:</label>
+                <div class="col-input">
                     <input type="text" class="form-control" th:field="*{brand}"/>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Type:</label>
-                <div class="col-sm-11">
+            <div class="form-group" style="display: flex;">
+                <label class="col-label control-label">Type:</label>
+                <div class="col-input">
                     <!-- <input type="text" class="form-control" th:field="*{type}"/> -->
                     <select class="form-control" th:field="*{type}">
-                        <option value="Manual">Manual</option>
+                        <option value="Dual-Sport">Dual-Sport</option>
                         <option value="Electric">Electric</option>
+                        <option value="Folding">Folding</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Mountain">Mountain</option>
+                        <option value="Road">Road</option>
                     </select>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Status:</label>
-                <div class="col-sm-11">
+            <div class="form-group" style="display: flex;">
+                <label class="col-label control-label">Status:</label>
+                <div class="col-input">
                     <!-- <input type="text" class="form-control" th:field="*{status}"/> -->
                     <select class="form-control" th:field="*{status}">
                         <option value="Available">Available</option>

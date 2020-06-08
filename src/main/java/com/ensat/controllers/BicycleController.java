@@ -27,7 +27,7 @@ public class BicycleController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "/bicycles", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String list(Model model) {
         model.addAttribute("bicycles", bicycleService.listAllBicycle());
         System.out.println("Returning bicycle:");
