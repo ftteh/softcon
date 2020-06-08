@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Example</title>
+    
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Bicycle Details</h2>
+    <div>
+        <form class="form-horizontal" th:object="${bicycle}" th:action="@{/bicycle}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <div class="form-group">
+                <label class=" col-sm-2 control-label">Brand:</label>
+                <div class="col-sm-11">
+                    <input type="text" class="form-control" th:field="*{brand}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Type:</label>
+                <div class="col-sm-11">
+                    <!-- <input type="text" class="form-control" th:field="*{type}"/> -->
+                    <select class="form-control" th:field="*{type}">
+                        <option value="Manual">Manual</option>
+                        <option value="Electric">Electric</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Status:</label>
+                <div class="col-sm-11">
+                    <!-- <input type="text" class="form-control" th:field="*{status}"/> -->
+                    <select class="form-control" th:field="*{status}">
+                        <option value="Available">Available</option>
+                        <option value="Not Available">Not Available</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" style="margin-left: 1px;">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

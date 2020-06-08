@@ -1,0 +1,18 @@
+label{
+    padding-left: 16px !important;
+    text-align: left !important;
+}
+
+@media (min-width: 768px){
+    .col-sm-2 {
+        width: 6.66666667%;
+    }    
+}
+
+@media (min-width: 768px)
+{
+    .col-sm-11 {
+        width: 93.3%;
+    }
+}
+
