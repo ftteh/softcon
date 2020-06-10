@@ -85,7 +85,7 @@ public class BicycleController {
     @RequestMapping(value = "bicycle/delete/{id}", method = RequestMethod.GET)
     public String delete(@PathVariable Integer id) {
         bicycleService.deleteBicycle(id);
-        return "redirect:/bicycles";
+        return "redirect:/";
     }
 
 }
